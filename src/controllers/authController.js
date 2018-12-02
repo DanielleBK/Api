@@ -31,9 +31,6 @@ router.post('/register', async (req, res) => {
         });
     }   catch (err) {
         return res.status(400).send({ error: 'Registration failed' });
-
-        if (!await bcrypt.compare(password, user.password))
-        return res.status(400).send({ error: 'Invalid password' })
     }
 });
 
@@ -49,10 +46,6 @@ router.post('/authenticate', async (req, res) => {
         return res.status(400).send({ error: 'Invalid password' });
 
     user.password = undefined; 
-
-    const token = jwt.sign ({ id: user.id }, authConfig.secret,{ 
-        expiresIn: 86400, 
-    });
 
     res.send({ 
         user, 
