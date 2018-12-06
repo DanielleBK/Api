@@ -17,17 +17,22 @@ const UserSchema = new mongoose.Schema({
         required: true,
         select: false,  
     },
-
+    conta: {
+        type: Number,
+        require: false,
+    },
+    agencia: {
+        type: Number,
+        require: false,        
+    },
     passwordResetToken: {
         type: String,
         select: false,
     },
-
     passwordResetExpires: {
         type: Date,
         select: false,
     },
-
     createdAt: {
         type: Date,
         default: Date.now,
