@@ -8,15 +8,15 @@ const TaskSchema = new mongoose.Schema({
     },
     project: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: "Project",
+        ref: 'Project',
         require: true,
     },
     assingnedTo: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: "User",
+        ref: 'User',
         require: true,
     },
-    completed: {
+    complete: {
         type: Boolean,
         requitre: true,
         default: false,
