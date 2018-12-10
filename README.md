@@ -26,5 +26,5 @@ Bibliotecas e dependências utilizadas na Api:
 ## Exemplo de chamada: 
 
 app.get("/", (req ,res) => {
-res.send( 'User' );
+res.send( 'User' ))};
     
